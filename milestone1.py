@@ -206,9 +206,9 @@ plt.show()
 # ### Price Column
 
 # - $50–$70	Normal	New AAA games
-- $100	Normal (for bundles or deluxe editions)	
-- $150+	Rare (big bundles, collector's editions, or mistakes)	
-- $500–$1900	Not normal (real outliers)
+# - $100	Normal (for bundles or deluxe editions)	
+# - $150+	Rare (big bundles, collector's editions, or mistakes)	
+# - $500–$1900	Not normal (real outliers)
 
 df['price'].describe()
 
@@ -240,7 +240,7 @@ plt.show()
 
 # - Most Steam games are between $0.99 – $19.99 normally.
 
-- Games priced $29.99, $49.99, $59.99 (AAA games) are rare compared to indie games.
+# - Games priced $29.99, $49.99, $59.99 (AAA games) are rare compared to indie games.
 
 df[[df['publisherClass_Hobbyist'] == 1] and df['price'] > 200]
 
@@ -523,7 +523,7 @@ for model_name, model in models.items():
         'Mean Squared Error': mse
     })
 results_df = pd.DataFrame(results)
-display(results_df)
+print(results_df)
 
 plt.figure(figsize=(8, 6))
 sns.scatterplot(x=y_test, y=y_pred, color="blue", alpha=0.6)
